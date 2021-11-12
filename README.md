@@ -7,3 +7,6 @@
 6. Idem y que ademas verifique que sean usuarios conectados al sistema ('06-holausuario.sh').
 7. Realizar un script llamado 'usuarioconectado' que retorna un SI si el primer parametro coincide con algun usuario conectado o NO en caso contrario.
 8. Modificar el fichero '.bashrc' para modificar el PATH y a?adir la carpeta de estos ejercicios. Para ello a?ade la siguiente linea: export PATH=$PATH":~/ruta_carpeta_ejercicios"
+Modificar el script '06-hola-usuario.sh' para que llame a 'usuarioconectado' ('09-hola-usuario.sh').
+Realizar un script llamado 'usuariosistema' que retorna un SI si el primer par?metro coincide con alg?n usuario del sistema o NO en caso contrario.
+Modificar el script '09-hola-usuario.sh' para que llame a 'usuariosistema' ('11-hola-usuario.sh').
