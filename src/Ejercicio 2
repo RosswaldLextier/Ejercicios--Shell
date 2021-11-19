@@ -1,0 +1,4 @@
+##############################
+ nano 02-hola-parametros.sh
+  #! /bin/bash
+echo "Hola $@!"
