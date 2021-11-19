@@ -1,0 +1,26 @@
+###########################
+nano 06-hola-usuario.sh
+! /bin/bash
+function ayuda() {
+ $0 N_1 [N_2] ... [N_N]
+}
+if [ $# -le 0] ; then
+ echo "Hay que introducir al menos un parámetro."
+ ayuda
+
+fi
+while [ -n "$1" ]; do
+CONECTADO= `quien | grep $1
+if [ -z "$ESTA_CONECTADO" ]; then
+echo "El usuario $1 no está conectado"
+ayuda
+fi
+if [ $PRIMERO -eq 1]; then
+MENSAJE="$MENSAJE $1"
+PRIMERO=0
+else
+MENSAJE="$MENSAJE, $1"
+fi
+shift
+done
+echo ${MENSAJE}"!"
