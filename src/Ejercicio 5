@@ -1,0 +1,33 @@
+##################################
+nano 05-hola-con-ayuda.sh
+!/bin/bash
+
+function ayuda() {
+
+cat << DESCRIPCION_AYUDA
+SYNOPSIS
+ $0 NOMBRE_1 [NOMBRE_2] ... [NOMBRE_N]
+
+DESCRIPCION
+ Muestra "Hola NOMBRE_1, NOMBRE_2, ... NOMBRE_N!" 
+}
+
+if test $# -le 0 ; then
+ echo "Hay que introducir al menos un parámetro."
+ ayuda
+ exit 1
+fi
+MENSAJE="Hola"
+PRIMERO=1
+while [ -n  "$1" ]; do
+
+ if [ $PRIMERO -eq 1 ]; then
+      MENSAJE="$MENSAJE $1"
+      PRIMERO=0
+ else
+      MENSAJE="$MENSAJE, $1"
+ fi
+
+done
+echo $MENSAJE"!"
+exit 0
