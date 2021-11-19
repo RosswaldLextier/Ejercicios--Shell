@@ -1,0 +1,18 @@
+################################
+nano usuarioconectado.sh
+! /bin/bash
+function ayuda()= {
+cat << DESCRIPCION_AYUDA
+SYNOPSIS
+$0 NOMBRE_USUARIO
+}
+if [ $# -ne 1 ]; then
+echo "El número de parámetros debe de igaul a 1"
+ayuda
+fi
+ESTÁ_CONECTADO=`who | grep $1`
+if [ -z "$ESTA_CONECTADO" ]; then
+echo "NO"
+else
+echo "SI"
+fi
